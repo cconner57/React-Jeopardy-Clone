@@ -5,7 +5,7 @@ function Questions({ game }) {
 		<div className="board">
 			<div className="column">
 				<div className="category">
-                    <h5>{game.categories[0].cName}</h5>
+					<h5>{game.categories[0].cName}</h5>
 				</div>
 				{game.set1.map((game, i) => {
 					return (

@@ -1,158 +1,70 @@
-import React, { Fragment } from 'react';
-import Board from './Board';
+import React, { useState } from 'react';
+import FormInput1 from './FormInput1';
+import FormInput2 from './FormInput2';
+import Questions from './Questions';
 
-function gameInput() {
-	return (
-		<Fragment>
-			<form className="Form-Container">
-				<div className="Input-Teams">
-					<label>Team Name</label>
-					<input type="text" placeholder="(optional)" />
-					<input type="button" value="&#43; AddTeam" />
-				</div>
-				<div className="Input-Categories">
-					<div className="Input-Questions">
-						<input className="Input-Title" type="text" placeholder="Category 1" />
-						<div className="Input-Group">
-							<input type="text" placeholder="$100 Question" />
-                            <input type="text" placeholder="$100 Answer" />
-						</div>
-						<div className="Input-Group">
-							<input type="text" placeholder="$200 Question" />
-                            <input type="text" placeholder="$200 Answer" />
-						</div>
-						<div className="Input-Group">
-							<input type="text" placeholder="$300 Question" />
-                            <input type="text" placeholder="$300 Answer" />
-						</div>
-						<div className="Input-Group">
-							<input type="text" placeholder="$400 Question" />
-                            <input type="text" placeholder="$400 Answer" />
-						</div>
-						<div className="Input-Group">
-							<input type="text" placeholder="$500 Question" />
-                            <input type="text" placeholder="$500 Answer" />
-						</div>
-					</div>
-					<div className="Input-Questions">
-						<input className="Input-Title" type="text" placeholder="Category 2" />
-						<div className="Input-Group">
-							<input type="text" placeholder="$100 Question" />
-                            <input type="text" placeholder="$100 Answer" />
-						</div>
-						<div className="Input-Group">
-							<input type="text" placeholder="$200 Question" />
-                            <input type="text" placeholder="$200 Answer" />
-						</div>
-						<div className="Input-Group">
-							<input type="text" placeholder="$300 Question" />
-                            <input type="text" placeholder="$300 Answer" />
-						</div>
-						<div className="Input-Group">
-							<input type="text" placeholder="$400 Question" />
-                            <input type="text" placeholder="$400 Answer" />
-						</div>
-						<div className="Input-Group">
-							<input type="text" placeholder="$500 Question" />
-                            <input type="text" placeholder="$500 Answer" />
-						</div>
-					</div>
-					<div className="Input-Questions">
-						<input className="Input-Title" type="text" placeholder="Category 3" />
-						<div className="Input-Group">
-							<input type="text" placeholder="$100 Question" />
-                            <input type="text" placeholder="$100 Answer" />
-						</div>
-						<div className="Input-Group">
-							<input type="text" placeholder="$200 Question" />
-                            <input type="text" placeholder="$200 Answer" />
-						</div>
-						<div className="Input-Group">
-							<input type="text" placeholder="$300 Question" />
-                            <input type="text" placeholder="$300 Answer" />
-						</div>
-						<div className="Input-Group">
-							<input type="text" placeholder="$400 Question" />
-                            <input type="text" placeholder="$400 Answer" />
-						</div>
-						<div className="Input-Group">
-							<input type="text" placeholder="$500 Question" />
-                            <input type="text" placeholder="$500 Answer" />
-						</div>
-					</div>
-					<div className="Input-Questions">
-						<input className="Input-Title" type="text" placeholder="Category 4" />
-						<div className="Input-Group">
-							<input type="text" placeholder="$100 Question" />
-                            <input type="text" placeholder="$100 Answer" />
-						</div>
-						<div className="Input-Group">
-							<input type="text" placeholder="$200 Question" />
-                            <input type="text" placeholder="$200 Answer" />
-						</div>
-						<div className="Input-Group">
-							<input type="text" placeholder="$300 Question" />
-                            <input type="text" placeholder="$300 Answer" />
-						</div>
-						<div className="Input-Group">
-							<input type="text" placeholder="$400 Question" />
-                            <input type="text" placeholder="$400 Answer" />
-						</div>
-						<div className="Input-Group">
-							<input type="text" placeholder="$500 Question" />
-                            <input type="text" placeholder="$500 Answer" />
-						</div>
-					</div>
-					<div className="Input-Questions">
-						<input className="Input-Title" type="text" placeholder="Category 5" />
-						<div className="Input-Group">
-							<input type="text" placeholder="$100 Question" />
-                            <input type="text" placeholder="$100 Answer" />
-						</div>
-						<div className="Input-Group">
-							<input type="text" placeholder="$200 Question" />
-                            <input type="text" placeholder="$200 Answer" />
-						</div>
-						<div className="Input-Group">
-							<input type="text" placeholder="$300 Question" />
-                            <input type="text" placeholder="$300 Answer" />
-						</div>
-						<div className="Input-Group">
-							<input type="text" placeholder="$400 Question" />
-                            <input type="text" placeholder="$400 Answer" />
-						</div>
-						<div className="Input-Group">
-							<input type="text" placeholder="$500 Question" />
-                            <input type="text" placeholder="$500 Answer" />
-						</div>
-					</div>
-					<div className="Input-Questions">
-						<input className="Input-Title" type="text" placeholder="Category 6" />
-						<div className="Input-Group">
-							<input type="text" placeholder="$100 Question" />
-                            <input type="text" placeholder="$100 Answer" />
-						</div>
-						<div className="Input-Group">
-							<input type="text" placeholder="$200 Question" />
-                            <input type="text" placeholder="$200 Answer" />
-						</div>
-						<div className="Input-Group">
-							<input type="text" placeholder="$300 Question" />
-                            <input type="text" placeholder="$300 Answer" />
-						</div>
-						<div className="Input-Group">
-							<input type="text" placeholder="$400 Question" />
-                            <input type="text" placeholder="$400 Answer" />
-						</div>
-						<div className="Input-Group">
-							<input type="text" placeholder="$500 Question" />
-                            <input type="text" placeholder="$500 Answer" />
-						</div>
-					</div>
-				</div>
-			</form>
-		</Fragment>
-	);
+function GameInput() {
+	const [ data, setData ] = useState({
+		step: 1,
+		category1: 'Category 1',
+		question1: '$300 Question',
+		answer1: '$300 Answer',
+		category2: 'Category 2',
+		question2: '$300 Question',
+		answer2: '$300 Answer',
+		category3: 'Category 3',
+		question3: '$300 Question',
+		answer3: '$300 Answer',
+		category4: 'Category 4',
+		question4: '$300 Question',
+		answer4: '$300 Answer',
+		category5: 'Category 5',
+		question5: '$300 Question',
+		answer5: '$300 Answer'
+	});
+
+	const nextStep = () => {
+		setData({
+			step: data.step + 1
+		});
+	};
+
+	const prevStep = () => {
+		setData({
+			step: data.step - 1
+		});
+	};
+
+	const onChange = (input) => (e) => {
+		setData({ [input]: e.target.value });
+	};
+
+	switch (data.step) {
+		case 1:
+			return (
+				<FormInput1
+					category={data.category1}
+					question1={data.question1}
+					answer1={data.answer1}
+					nextStep={nextStep}
+					onChange={onChange}
+				/>
+			);
+		case 2:
+			return <FormInput2 category={data.category2} prevStep={prevStep} nextStep={nextStep} onChange={onChange} />;
+		case 3:
+			return <FormInput2 category={data.category3} prevStep={prevStep} nextStep={nextStep} onChange={onChange} />;
+		case 4:
+			return <FormInput2 category={data.category4} prevStep={prevStep} nextStep={nextStep} onChange={onChange} />;
+		case 5:
+			return <FormInput2 category={data.category5} prevStep={prevStep} nextStep={nextStep} onChange={onChange} />;
+		case 6:
+			return <FormInput2 category={data.category6} prevStep={prevStep} nextStep={nextStep} onChange={onChange} />;
+		case 7:
+			return <Questions />;
+		default:
+			return 'Error';
+	}
 }
 
-export default gameInput;
+export default GameInput;

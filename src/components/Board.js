@@ -12,12 +12,12 @@ function Board() {
 	});
 	const [ game, setGame ] = useState({
 		categories: [
-			{cName: 'Category 1'},
-			{cName: 'Category 2'},
-			{cName: 'Category 3'},
-			{cName: 'Category 4'},
-			{cName: 'Category 5'},
-			{cName: 'Category 6'},
+			{ cName: 'Category 1' },
+			{ cName: 'Category 2' },
+			{ cName: 'Category 3' },
+			{ cName: 'Category 4' },
+			{ cName: 'Category 5' },
+			{ cName: 'Category 6' }
 		],
 		set1: [
 			{ money: '$100', q: '', clicked: false },

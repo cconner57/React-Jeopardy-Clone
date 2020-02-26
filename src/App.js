@@ -1,5 +1,5 @@
 import React from 'react';
-import GameInput from './components/gameInput'
+import GameInput from './components/GameInput'
 import './App.css';
 
 function App() {
