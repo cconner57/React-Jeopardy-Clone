@@ -1,25 +1,32 @@
-import React from 'react'
+import React, {useContext} from 'react'
+import {GameContext} from './GameContext'
 
-function FormInput1({category, question1, answer1, nextStep, onChange}) {
+const FormInput1 = ({ nextStep, onChange}) => {
+    const [setGame, setTeam] = useContext(GameContext)
+
     const next = e => {
         e.preventDefault();
         nextStep();
     }
+
+    // const addTeam = () => {
+
+    // }
 
     return (
         <>
             <form className="Form-Container">
             <div className="Input-Teams">
 					<label>Team Name</label>
-					<input type="text" placeholder="(optional)" />
+					<input type="text" placeholder="(optional)" onChange={setTeam} />
 					<input type="button" value="&#43; Add Team" />
 				</div>
 				<div className="Input-Categories">
                     <div className="Input-Questions">
-                        <input className="Input-Title" type="text" placeholder={category} onChange={onChange} />
+                        <input className="Input-Title" type="text" placeholder='Category 1' onChange={onChange} />
                         <div className="Input-Group">
-                            <input type="text" placeholder={question1} onChange={onChange} />
-                            <input type="text" placeholder={answer1} onChange={onChange} />
+                            <input type="text" placeholder='$100 Question' onChange={setGame} />
+                            <input type="text" placeholder='$100 Answer' onChange={onChange} />
                         </div>
                         <div className="Input-Group">
                             <input type="text" placeholder="$200 Question" onChange={onChange} />
