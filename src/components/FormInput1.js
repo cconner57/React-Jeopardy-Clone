@@ -1,8 +1,10 @@
 import React, {useContext} from 'react'
 import {GameContext} from './GameContext'
+import {TeamContext} from './TeamContext'
 
 const FormInput1 = ({ nextStep, onChange}) => {
-    const [setGame, setTeam] = useContext(GameContext)
+    const [setGame] = useContext(GameContext)
+    const [setTeam] = useContext(TeamContext)
 
     const next = e => {
         e.preventDefault();
