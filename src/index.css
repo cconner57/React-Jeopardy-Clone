@@ -34,7 +34,7 @@ a {
 
 abbr[title] {
   border-bottom: none;
-  ext-decoration: underline;
+  text-decoration: underline;
   -webkit-text-decoration: underline dotted;
           text-decoration: underline dotted;
 }
@@ -182,6 +182,33 @@ template {
   display: none;
 }
 
+.Welcome-Container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 35vh 0;
+}
+
+.Welcome-Container h1 {
+  color: blue;
+}
+
+.Welcome-Container input[type=button] {
+  border: 1px solid black;
+  border-radius: 15px;
+}
+
+.Welcome-Container p {
+  font-weight: bold;
+}
+
 .Form-Container {
   border: 1px solid black;
   border-radius: 5px;
@@ -257,44 +284,55 @@ template {
   display: -ms-flexbox;
   display: flex;
   padding: 10px 200px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .teams {
-  padding: 5px 40px;
+  margin: 0 5%;
+  padding: 5px 50px;
   border-radius: 15px;
   border: 1px solid lightblue;
   background-color: #0064ff;
 }
 
+.Board-Container {
+  height: 98vh;
+  text-align: center;
+  background: black;
+}
+
 .board {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (200px)[6];
-      grid-template-columns: repeat(6, 200px);
+  -ms-grid-columns: (260px)[6];
+      grid-template-columns: repeat(6, 260px);
   -ms-grid-rows: (auto)[5];
       grid-template-rows: repeat(5, auto);
-  grid-gap: 5px;
+  grid-gap: 15px;
   margin: 5px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .category {
-  padding: 45px 50px;
+  padding: 45px;
   border-radius: 15px;
+  border: 2px solid white;
   background: radial-gradient(circle, blue 20%, #0032ff 40%, #0064ff 60%, #0096ff 80%, #00c8ff 100%);
 }
 
 .block {
-  width: 200px;
+  width: 250px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 110px;
+  height: 150px;
   overflow: hidden;
-  max-width: 200px;
-  max-height: 110px;
+  min-width: 130px;
+  min-height: 90px;
   border-radius: 15px;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -302,14 +340,13 @@ template {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  border: 2px solid white;
   background: radial-gradient(circle, blue 20%, #0032ff 40%, #0064ff 60%, #0096ff 80%, #00c8ff 100%);
 }
 
-.block h5 {
-  height: 10px;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 40px;
-          flex: 1 1 40px;
+.block:hover {
+  cursor: pointer;
+  background: radial-gradient(circle, #00c8ff 20%, blue 100%);
 }
 
 h1 {

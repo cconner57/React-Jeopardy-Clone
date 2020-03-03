@@ -1,6 +1,6 @@
 import React, {useContext} from 'react'
-import {GameContext} from './GameContext'
-import {TeamContext} from './TeamContext'
+import {GameContext} from '../GameContext'
+import {TeamContext} from '../TeamContext'
 
 const FormInput1 = ({ nextStep, onChange}) => {
     const [setGame] = useContext(GameContext)

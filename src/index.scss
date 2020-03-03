@@ -26,7 +26,7 @@ a {
 }
 abbr[title] {
 	border-bottom: none;
-	ext-decoration: underline;
+	text-decoration: underline;
 	text-decoration: underline dotted;
 }
 b,
@@ -145,6 +145,25 @@ template {
 	display: none;
 }
 
+// Welcome
+
+.Welcome-Container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 35vh 0;
+	h1 {
+		color: blue;
+	}
+	input[type=button] {
+		border: 1px solid black;
+		border-radius: 15px;
+	}
+	p {
+		font-weight: bold;
+	}
+}
+
 // Form
 
 .Form-Container {
@@ -205,28 +224,38 @@ template {
 .team-container {
 	display: flex;
 	padding: 10px 200px;
-	justify-content: space-between;
+	justify-content: space-evenly;
 }
 
 .teams {
-	padding: 5px 40px;
+	margin: 0 5%;
+	padding: 5px 50px;
 	border-radius: 15px;
 	border: 1px solid lightblue;
 	background-color: rgb(0, 100, 255);
 }
 
 // Board
+.Board-Container {
+	// width: 100vw;
+	height: 98vh;
+	text-align: center;
+	background: black;
+}
+
 .board {
 	display: grid;
-	grid-template-columns: repeat(6, 200px);
+	grid-template-columns: repeat(6, 260px);
 	grid-template-rows: repeat(5, auto);
-	grid-gap: 5px;
+	grid-gap: 15px;
 	margin: 5px;
+	justify-content: center;
 }
 
 .category {
-	padding: 45px 50px;
+	padding: 45px;
 	border-radius: 15px;
+	border: 2px solid white;
 	background: radial-gradient(
 		circle,
 		rgb(0, 0, 255) 20%,
@@ -238,15 +267,16 @@ template {
 }
 
 .block {
-	width: 200px;
+	width: 250px;
 	display: flex;
-	height: 110px;
+	height: 150px;
 	overflow: hidden;
-	max-width: 200px;
-	max-height: 110px;
+	min-width: 130px;
+	min-height: 90px;
 	border-radius: 15px;
 	align-items: center;
 	justify-content: center;
+	border: 2px solid white;
 	background: radial-gradient(
 		circle,
 		rgb(0, 0, 255) 20%,
@@ -255,10 +285,11 @@ template {
 		rgb(0, 150, 255) 80%,
 		rgb(0, 200, 255) 100%
 	);
-	h5 {
-		height: 10px;
-		flex: 1 1 40px;
-	}
+}
+
+.block:hover {
+	cursor: pointer;
+	background: radial-gradient(circle, rgb(0, 200, 255) 20%, rgb(0, 0, 255) 100%);
 }
 
 h1 {

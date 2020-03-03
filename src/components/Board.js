@@ -5,14 +5,14 @@ import Questions from './Questions';
 import { GameProvider } from './GameContext';
 import { TeamProvider } from './TeamContext';
 
-function Board() {
+const Board = () => {
 	// const revealQuestion = () => {
 	// 	document.style.display = 'none';
 	// 	document.style.display = 'block';
 	// };
 
 	return (
-		<div className="container">
+		<div className="Board-Container">
 			<h1>Jeopardy</h1>
 			<TeamProvider>
 				<Teams />
