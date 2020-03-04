@@ -14,6 +14,7 @@ const Board = () => {
 	return (
 		<div className="Board-Container">
 			<h1>Jeopardy</h1>
+			
 			<TeamProvider>
 				<Teams />
 			</TeamProvider>

@@ -4,66 +4,54 @@ export const GameContext = createContext();
 
 export const GameProvider = (props) => {
 	const [ game, setGame ] = useState([
-		{
-			category: 'Category 1',
-			text: [
-				{ question: 'Tests1', answer: 'yes' },
-				{ question: 'Tests', answer: 'yes' },
-				{ question: 'Tests', answer: 'yes' },
-				{ question: 'Tests', answer: 'yes' },
-				{ question: 'Tests', answer: 'yes' },
-			]
-		},
-		{
-			category: 'Category 2',
-			text: [
-				{ question: 'Tests2', answer: 'yes' },
-				{ question: 'Tests', answer: 'yes' },
-				{ question: 'Tests', answer: 'yes' },
-				{ question: 'Tests', answer: 'yes' },
-				{ question: 'Tests', answer: 'yes' },
-			]
-		},
-		{
-			category: 'Category 3',
-			text: [
-				{ question: 'Tests3', answer: 'yes' },
-				{ question: 'Tests', answer: 'yes' },
-				{ question: 'Tests', answer: 'yes' },
-				{ question: 'Tests', answer: 'yes' },
-				{ question: 'Tests', answer: 'yes' },
-			]
-		},
-		{
-			category: 'Category 4',
-			text: [
-				{ question: 'Tests4', answer: 'yes' },
-				{ question: 'Tests', answer: 'yes' },
-				{ question: 'Tests', answer: 'yes' },
-				{ question: 'Tests', answer: 'yes' },
-				{ question: 'Tests', answer: 'yes' },
-			]
-		},
-		{
-			category: 'Category 5',
-			text: [
-				{ question: 'Tests5', answer: 'yes' },
-				{ question: 'Tests', answer: 'yes' },
-				{ question: 'Tests', answer: 'yes' },
-				{ question: 'Tests', answer: 'yes' },
-				{ question: 'Tests', answer: 'yes' },
-			]
-		},
-		{
-			category: 'Category 6',
-			text: [
-				{ question: 'Tests6', answer: 'yes' },
-				{ question: 'Tests', answer: 'yes' },
-				{ question: 'Tests', answer: 'yes' },
-				{ question: 'Tests', answer: 'yes' },
-				{ question: 'Tests', answer: 'yes' },
-			]
-		}
+		[
+			[ 'Category 1' ],
+			[ 100, 'How many legs do dogs have?', false ],
+			[ 200, 'How many legs do cats have?', false ],
+			[ 300, 'What color is a school bus?', false ],
+			[ 400, 'What color is water?', false ],
+			[ 500, 'What color is a food?', false ]
+		],
+		[
+			[ 'Category 2' ],
+			[ 100, 'How many legs do dogs have?', false ],
+			[ 200, 'How many legs do cats have?', false ],
+			[ 300, 'What color is a school bus?', false ],
+			[ 400, 'What color is water?', false ],
+			[ 500, 'What color is a food?', false ]
+		],
+		[
+			[ 'Category 3' ],
+			[ 100, 'How many legs do dogs have?', false ],
+			[ 200, 'How many legs do cats have?', false ],
+			[ 300, 'What color is a school bus?', false ],
+			[ 400, 'What color is water?', false ],
+			[ 500, 'What color is a food?', false ]
+		],
+		[
+			[ 'Category 4' ],
+			[ 100, 'How many legs do dogs have?', false ],
+			[ 200, 'How many legs do cats have?', false ],
+			[ 300, 'What color is a school bus?', false ],
+			[ 400, 'What color is water?', false ],
+			[ 500, 'What color is a food?', false ]
+		],
+		[
+			[ 'Category 5' ],
+			[ 100, 'How many legs do dogs have?', false ],
+			[ 200, 'How many legs do cats have?', false ],
+			[ 300, 'What color is a school bus?', false ],
+			[ 400, 'What color is water?', false ],
+			[ 500, 'What color is a food?', false ]
+		],
+		[
+			[ 'Category 6' ],
+			[ 100, 'How many legs do dogs have?', false ],
+			[ 200, 'How many legs do cats have?', false ],
+			[ 300, 'What color is a school bus?', false ],
+			[ 400, 'What color is water?', false ],
+			[ 500, 'What color is a food?', false ]
+		],
 	]);
 	return <GameContext.Provider value={[ game, setGame ]}>{props.children}</GameContext.Provider>;
 };
