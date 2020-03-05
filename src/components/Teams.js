@@ -1,12 +1,12 @@
 import React, { useContext } from 'react';
-import { TeamContext } from './TeamContext';
+import { GameContext } from './GameContext';
 
 const Teams = () => {
-	const [ team ] = useContext(TeamContext);
+	const [ game ] = useContext(GameContext);
 	return (
 		<>
 			<div className="team-container">
-				{team.teams.map((team) => {
+				{game.teams.map((team) => {
 					return (
 						<div className="teams">
 							<h5>

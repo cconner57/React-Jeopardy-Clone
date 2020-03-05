@@ -1,11 +1,6 @@
 import React from 'react'
 
 function FormInput2({category, prevStep, nextStep, onChange}) {
-    const back = e => {
-        e.preventDefault();
-        prevStep();
-    }
-    
     const next = e => {
         e.preventDefault();
         nextStep();
@@ -13,7 +8,7 @@ function FormInput2({category, prevStep, nextStep, onChange}) {
 
     return (
         <>
-            <form className="Form-Container">
+            <form className="Form-Container" onSubmit={next}>
                 <div className="Input-Categories">
                     <div className="Input-Questions">
                         <input className="Input-Title" type="text" placeholder={category} onChange={onChange} />
@@ -37,8 +32,7 @@ function FormInput2({category, prevStep, nextStep, onChange}) {
                             <input type="text" placeholder="$500 Question" onChange={onChange} />
                             <input type="text" placeholder="$500 Answer" onChange={onChange} />
                         </div>
-                        <input type="button" value="Back" onClick={back} />
-                        <input type="button" value="Next" onClick={next} />
+                        <input type="submit" value="Next" />
                     </div>
                 </div>
             </form>

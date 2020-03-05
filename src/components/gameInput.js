@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import Welcome from './Welcome';
-import FormInput1 from './Form/FormInput1';
-import FormInput2 from './Form/FormInput2';
+import TeamInput from './Form/TeamInput';
+import QuestionInput from './Form/QuestionInput';
 import Board from './Board';
 import { GameProvider } from './GameContext';
-import { TeamProvider } from './TeamContext';
 
 const GameInput = () => {
 	const [ data, setData ] = useState({
@@ -17,11 +16,11 @@ const GameInput = () => {
 		});
 	};
 
-	const prevStep = () => {
-		setData({
-			step: data.step - 1
-		});
-	};
+	// const prevStep = () => {
+	// 	setData({
+	// 		step: data.step - 1
+	// 	});
+	// };
 
 	const onChange = (input) => (e) => {
 		setData({ [input]: e.target.value });
@@ -32,40 +31,41 @@ const GameInput = () => {
 			return <Welcome nextStep={nextStep} />;
 		case 2:
 			return (
+				<>
 				<GameProvider>
-					<TeamProvider>
-						<FormInput1 nextStep={nextStep} onChange={onChange} />
-					</TeamProvider>
+					<TeamInput nextStep={nextStep} onChange={onChange} />
+					<QuestionInput category="Category 1" nextStep={nextStep} onChange={onChange} />
 				</GameProvider>
+				</>
 			);
 		case 3:
 			return (
 				<GameProvider>
-					<FormInput2 category="Category 2" prevStep={prevStep} nextStep={nextStep} onChange={onChange} />
+					<QuestionInput category="Category 2" nextStep={nextStep} onChange={onChange} />
 				</GameProvider>
 			);
 		case 4:
 			return (
 				<GameProvider>
-					<FormInput2 category="Category 3" prevStep={prevStep} nextStep={nextStep} onChange={onChange} />
+					<QuestionInput category="Category 3" nextStep={nextStep} onChange={onChange} />
 				</GameProvider>
 			);
 		case 5:
 			return (
 				<GameProvider>
-					<FormInput2 category="Category 4" prevStep={prevStep} nextStep={nextStep} onChange={onChange} />
+					<QuestionInput category="Category 4" nextStep={nextStep} onChange={onChange} />
 				</GameProvider>
 			);
 		case 6:
 			return (
 				<GameProvider>
-					<FormInput2 category="Category 5" prevStep={prevStep} nextStep={nextStep} onChange={onChange} />
+					<QuestionInput category="Category 5" nextStep={nextStep} onChange={onChange} />
 				</GameProvider>
 			);
 		case 7:
 			return (
 				<GameProvider>
-					<FormInput2 category="Category 6" prevStep={prevStep} nextStep={nextStep} onChange={onChange} />
+					<QuestionInput category="Category 6" nextStep={nextStep} onChange={onChange} />
 				</GameProvider>
 			);
 		case 8:
