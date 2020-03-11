@@ -18,7 +18,7 @@ const FormInput1 = ({ nextStep, onChange}) => {
         <>
             <form className="Team-Container" onSubmit={next}>
                 <div className="Input-Teams">
-					<label>Team Name</label>
+					<label>Team Name:</label>
 					<input name="teamName" type="text" placeholder="(optional)" onChange={setGame.teams.team} />
 					<input type="button" value="&#43; Add Team" />
 				</div>

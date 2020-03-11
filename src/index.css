@@ -135,7 +135,7 @@ template {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  margin: 20vh 25vh;
+  margin: 7vh 25vh;
   padding: 15% 5%;
   border-radius: 5px;
   -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
@@ -157,21 +157,20 @@ template {
   cursor: pointer;
 }
 
+.Welcome-Container input[type=button]:hover {
+  background: #ececec;
+}
+
 .Welcome-Container p {
   font-family: 'Chakra Petch', sans-serif;
 }
 
 .Team-Container {
-  margin: 10% 22% 0;
+  margin: 10% 5% 0;
   padding: 15px;
 }
 
-.Form-Container {
-  margin: 0 22%;
-  padding: 15px;
-}
-
-.Input-Teams {
+.Team-Container div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -188,6 +187,38 @@ template {
   border-radius: 5px;
   -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
           box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.Team-Container div label {
+  background: lightblue;
+  border-radius: 10px 0 0 10px;
+  padding: 5px;
+  -webkit-box-shadow: 5px 5px 5px 0px rgba(200, 200, 200, 0.5);
+          box-shadow: 5px 5px 5px 0px rgba(200, 200, 200, 0.5);
+}
+
+.Team-Container div input[type=text] {
+  background: lightblue;
+  border: none;
+  padding: 5px 0;
+  -webkit-box-shadow: 5px 5px 5px 0px rgba(200, 200, 200, 0.5);
+          box-shadow: 5px 5px 5px 0px rgba(200, 200, 200, 0.5);
+}
+
+.Team-Container div input[type=button] {
+  background: lightblue;
+  border: none;
+  border-left: .5px solid gray;
+  border-radius: 0 10px 10px 0;
+  padding: 5px;
+  cursor: pointer;
+  -webkit-box-shadow: 5px 5px 5px 0px rgba(200, 200, 200, 0.5);
+          box-shadow: 5px 5px 5px 0px rgba(200, 200, 200, 0.5);
+}
+
+.Form-Container {
+  margin: 0 22%;
+  padding: 15px;
 }
 
 .Input-Categories {
