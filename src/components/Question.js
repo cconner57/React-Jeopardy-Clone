@@ -1,10 +1,26 @@
 import React from 'react';
 
-const Question = ({index, question, }) => {
+const Question = ({index, question}) => {
 	return (
         <>
 		    <div key={index} className="block" >
-			    <h5>{question[0][2] ? 'Test' : `${question[1][0]}`}</h5>
+			    {/* <h5>{question ? 'Test' : `${question}`}</h5> */}
+			    <h5>{question.question1}</h5>
+		    </div>
+		    <div key={index} className="block" >
+			    <h5>{question.question2}</h5>
+		    </div>
+		    <div key={index} className="block" >
+			    <h5>{question.question3}</h5>
+		    </div>
+		    <div key={index} className="block" >
+			    <h5>{question.question4}</h5>
+		    </div>
+		    <div key={index} className="block" >
+			    <h5>{question.question5}</h5>
+		    </div>
+		    <div key={index} className="block" >
+			    <h5>{question.question6}</h5>
 		    </div>
         </>
 	);

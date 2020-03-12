@@ -33,8 +33,8 @@ const GameInput = () => {
 			return (
 				<>
 				<GameProvider>
-					<TeamInput nextStep={nextStep} onChange={onChange} />
 					<QuestionInput category="Category 1" nextStep={nextStep} onChange={onChange} />
+					<TeamInput nextStep={nextStep} onChange={onChange} />
 				</GameProvider>
 				</>
 			);

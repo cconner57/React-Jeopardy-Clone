@@ -10,9 +10,9 @@ const FormInput1 = ({ nextStep, onChange}) => {
         nextStep();
     }
 
-    const teamName = () => {
+    // const teamName = () => {
 
-    }
+    // }
 
     return (
         <>

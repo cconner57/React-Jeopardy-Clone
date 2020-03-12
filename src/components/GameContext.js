@@ -19,12 +19,12 @@ export const GameProvider = (props) => {
 			}
 		},
 		categories: {
-			category1: 'category 1',
-			category2: 'category 2',
-			category3: 'category 3',
-			category4: 'category 4',
-			category5: 'category 5',
-			category6: 'category 6'
+			category1: 'Category 1',
+			category2: 'Category 2',
+			category3: 'Category 3',
+			category4: 'Category 4',
+			category5: 'Category 5',
+			category6: 'Category 6'
 		},
 		score: [ 100, 200, 300, 400, 500 ],
 		questions: {
