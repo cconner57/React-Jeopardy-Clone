@@ -185,6 +185,16 @@ template {
 	justify-content: space-evenly;
 }
 
+.Input-Group {
+	border: 1px solid black;
+	border-radius: 5px;
+	margin: 0 40px;
+	padding: 5px;
+	input[type=text] {
+		width: 200px;
+	}
+}
+
 .Input-Questions {
 	border-radius: 5px;
 	display: flex;
@@ -209,15 +219,6 @@ template {
 	}
 }
 
-.Input-Group {
-	border: 1px solid black;
-	border-radius: 5px;
-	margin: 0 40px;
-	padding: 5px;
-	input[type=text] {
-		width: 200px;
-	}
-}
 
 // Team
 

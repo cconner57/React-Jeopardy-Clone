@@ -32,6 +32,7 @@ const Questions = () => {
 				<h5>{game.categories.category6}</h5>
 			</div>
 			{/* <Question key={index} index={index} question={score} /> */}
+			
 			<Question question={game.questions.set1} />
 		</div>
 	);
