@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Days+One&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Chakra+Petch&display=swap');
 
+$primary: #80D8FF;
+$secondary: #40C4FF;
+$accent-primary: #00B0FF;
+$accent-secondary: #0091EA;
+
 html {
 	line-height: 1.15;
 	-webkit-text-size-adjust: 100%;
@@ -112,18 +117,19 @@ template {
 	padding: 15% 5%;
 	border-radius: 5px;
 	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-	background: yellowgreen;
+	background: #80D8FF;
 	h1 {
-		color: blue;
+		color: #0091EA;
 		font-size: 50px;
 		font-family: 'Days One', sans-serif;
 	}
 	input[type=button] {
-		border: 1px solid black;
+		border: 1px solid #0091EA;
 		border-radius: 15px;
+		color: white;
+		background: #0091EA;
 		margin: 30px 0;
 		padding: 10px;
-		background: rgb(255, 255, 255);
 		cursor: pointer;
 	}
 	input[type=button]:hover {

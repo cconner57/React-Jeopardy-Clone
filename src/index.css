@@ -140,21 +140,22 @@ template {
   border-radius: 5px;
   -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
           box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-  background: yellowgreen;
+  background: #80D8FF;
 }
 
 .Welcome-Container h1 {
-  color: blue;
+  color: #0091EA;
   font-size: 50px;
   font-family: 'Days One', sans-serif;
 }
 
 .Welcome-Container input[type=button] {
-  border: 1px solid black;
+  border: 1px solid #0091EA;
   border-radius: 15px;
+  color: white;
+  background: #0091EA;
   margin: 30px 0;
   padding: 10px;
-  background: white;
   cursor: pointer;
 }
 
@@ -234,6 +235,17 @@ template {
           justify-content: space-evenly;
 }
 
+.Input-Group {
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 0 40px;
+  padding: 5px;
+}
+
+.Input-Group input[type=text] {
+  width: 200px;
+}
+
 .Input-Questions {
   border-radius: 5px;
   display: -webkit-box;
@@ -265,17 +277,6 @@ template {
 .Input-Questions input[type=submit]:hover {
   background: gray;
   cursor: pointer;
-}
-
-.Input-Group {
-  border: 1px solid black;
-  border-radius: 5px;
-  margin: 0 40px;
-  padding: 5px;
-}
-
-.Input-Group input[type=text] {
-  width: 200px;
 }
 
 .team-container {
