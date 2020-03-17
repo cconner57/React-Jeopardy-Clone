@@ -40,13 +40,6 @@ strong {
   font-weight: bolder;
 }
 
-code,
-kbd,
-samp {
-  font-family: monospace, monospace;
-  font-size: 1em;
-}
-
 img {
   border-style: none;
 }
@@ -127,90 +120,186 @@ template {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  margin: 10vh 10vh;
-  padding: 15% 5%;
-  border-radius: 5px;
+  border-radius: 25px;
   -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
           box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-  background: #80D8FF;
+  background: white;
+  margin: 15vh 25vw;
+  padding: 50px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #00b0ff;
+  max-width: 500px;
 }
 
 .Welcome-Container h1 {
-  color: #0091EA;
-  font-size: 50px;
+  color: #00b0ff;
+  font-size: 35px;
   font-family: 'Days One', sans-serif;
+  border-radius: 10px;
+  background: white;
+  padding: 20px 25px;
+  margin-bottom: 100px;
+  -webkit-box-shadow: 5px 5px 5px 0px rgba(200, 200, 200, 0.5);
+          box-shadow: 5px 5px 5px 0px rgba(200, 200, 200, 0.5);
 }
 
 .Welcome-Container input[type=button] {
-  border: 1px solid #0091EA;
-  border-radius: 15px;
-  color: white;
-  background: #0091EA;
+  border-radius: 25px;
+  color: #00b0ff;
+  background: white;
   margin: 30px 0;
-  padding: 10px;
+  padding: 10px 20px;
   cursor: pointer;
+  -webkit-box-shadow: 5px 5px 5px 0px rgba(200, 200, 200, 0.5);
+          box-shadow: 5px 5px 5px 0px rgba(200, 200, 200, 0.5);
 }
 
 .Welcome-Container input[type=button]:hover {
   background: #e6e6e6;
 }
 
-.Welcome-Container p {
+.Welcome-Container div {
+  border-radius: 10px;
+  color: #00b0ff;
+  background: white;
+  margin: 75px 0;
+  padding: 5px 25px;
+  -webkit-box-shadow: 5px 5px 5px 0px rgba(200, 200, 200, 0.5);
+          box-shadow: 5px 5px 5px 0px rgba(200, 200, 200, 0.5);
   font-family: 'Chakra Petch', sans-serif;
 }
 
-.Team-Container {
-  margin: 0 5%;
-  padding: 15px;
-}
-
-.Team-Container div {
+.Form-Container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border-radius: 5px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: center;
+  border-radius: 25px;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  background: white;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 0 25%;
-  padding: 3%;
-  background: white;
-  border-radius: 5px;
-  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 15px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 350px;
+  margin: 10% 35%;
 }
 
-.Team-Container div label {
-  background: lightblue;
-  border-radius: 10px 0 0 10px;
+.Form-Container .Input-Title {
+  text-align: center;
+  margin: 10px 20%;
+  width: 200px;
+  border: 1px solid #80d8ff;
+  border-radius: 15px;
+  -webkit-box-shadow: 5px 5px 5px 0px rgba(200, 200, 200, 0.5);
+          box-shadow: 5px 5px 5px 0px rgba(200, 200, 200, 0.5);
+}
+
+.Form-Container .Input-Title:focus {
+  outline: none;
+  border-color: #40c4ff;
+  -webkit-box-shadow: 0 0 10px #40c4ff;
+          box-shadow: 0 0 10px #40c4ff;
+}
+
+.Form-Container .Input-Group {
+  border: 1px solid #00b0ff;
+  border-radius: 5px;
+  margin: 0 40px;
   padding: 5px;
   -webkit-box-shadow: 5px 5px 5px 0px rgba(200, 200, 200, 0.5);
           box-shadow: 5px 5px 5px 0px rgba(200, 200, 200, 0.5);
 }
 
-.Team-Container div input[type=text] {
-  background: lightblue;
-  border: none;
+.Form-Container .Input-Group input[type=text] {
+  width: 200px;
+  border: 1px solid #80d8ff;
+  border-radius: 3px;
+  margin: 1px 0;
+}
+
+.Form-Container .Input-Group input[type=text]:focus {
+  outline: none;
+  border-color: #40c4ff;
+  -webkit-box-shadow: 0 0 10px #40c4ff;
+          box-shadow: 0 0 10px #40c4ff;
+}
+
+.Form-Container input[type=submit] {
+  margin: 10px 125px;
+  border: 1px solid #40c4ff;
+  background: white;
+  border-radius: 10px;
+  -webkit-box-shadow: 5px 5px 5px 0px rgba(200, 200, 200, 0.5);
+          box-shadow: 5px 5px 5px 0px rgba(200, 200, 200, 0.5);
+}
+
+.Form-Container input[type=submit]:hover {
+  background: gray;
+  cursor: pointer;
+}
+
+.Team-Container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  border-radius: 25px;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  background: white;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 5%;
+  padding: 15px;
+}
+
+.Team-Container label {
+  border-radius: 10px 0 0 10px;
+  padding: 5px;
+  border: 1px solid #80d8ff;
+  -webkit-box-shadow: 5px 5px 5px 0px rgba(200, 200, 200, 0.5);
+          box-shadow: 5px 5px 5px 0px rgba(200, 200, 200, 0.5);
+}
+
+.Team-Container input[type=text] {
+  border: 1px solid #80d8ff;
   padding: 5px 0;
   -webkit-box-shadow: 5px 5px 5px 0px rgba(200, 200, 200, 0.5);
           box-shadow: 5px 5px 5px 0px rgba(200, 200, 200, 0.5);
 }
 
-.Team-Container div input[type=button] {
-  background: lightblue;
-  border: none;
-  border-left: .5px solid gray;
+.Team-Container input[type=text]:focus {
+  outline: none;
+  border-color: #40c4ff;
+  -webkit-box-shadow: 0 0 10px #40c4ff;
+          box-shadow: 0 0 10px #40c4ff;
+}
+
+.Team-Container input[type=button] {
+  background: white;
+  border: 1px solid #80d8ff;
   border-radius: 0 10px 10px 0;
   padding: 5px;
   cursor: pointer;
@@ -218,65 +307,8 @@ template {
           box-shadow: 5px 5px 5px 0px rgba(200, 200, 200, 0.5);
 }
 
-.Form-Container {
-  margin-top: 5%;
-  padding: 15px;
-}
-
-.Input-Categories {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  text-align: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-}
-
-.Input-Group {
-  border: 1px solid black;
-  border-radius: 5px;
-  margin: 0 40px;
-  padding: 5px;
-}
-
-.Input-Group input[type=text] {
-  width: 200px;
-}
-
-.Input-Questions {
-  border-radius: 5px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 350px;
-  margin: 10px;
-  background: white;
-  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-}
-
-.Input-Questions .Input-Title {
-  text-align: center;
-  margin: 10px 20%;
-  width: 200px;
-}
-
-.Input-Questions input[type=submit] {
-  margin: 10px 125px;
-  border: 1px solid gray;
-  border-radius: 10px;
-}
-
-.Input-Questions input[type=submit]:hover {
-  background: gray;
-  cursor: pointer;
+.Team-Container input[type=button]:hover {
+  background: #e6e6e6;
 }
 
 .team-container {

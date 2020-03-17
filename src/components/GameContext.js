@@ -5,17 +5,21 @@ export const GameContext = createContext();
 export const GameProvider = (props) => {
 	const [ game, setGame ] = useState({
 		teams: {
-			teamNames: {
-				name1: 'Chris',
-				name2: 'Marma',
-				name3: 'Amos',
-				name4: 'Delilah'
+			team1: {
+				name: 'Chris',
+				score: 0
 			},
-			teamScores: {
-				score1: 0,
-				score2: 0,
-				score3: 0,
-				score4: 0
+			team2: {
+				name: 'Marma',
+				score: 0
+			},
+			team3: {
+				name: 'Amos',
+				score: 0
+			},
+			team4: {
+				name: 'Delilah',
+				score: 0
 			}
 		},
 		categories: {

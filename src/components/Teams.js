@@ -8,24 +8,31 @@ const Teams = () => {
 			<div className="team-container">
 				<div className="teams">
 					<h5>
-						{game.teams.teamNames.name1}: ${game.teams.teamNames.score1}
+						{game.teams.team1.name}: ${game.teams.team1.score}
 					</h5>
 				</div>
 				<div className="teams">
 					<h5>
-						{game.teams.teamNames.name2}: ${game.teams.teamNames.score2}
+						{game.teams.team2.name}: ${game.teams.team2.score}
 					</h5>
 				</div>
 				<div className="teams">
 					<h5>
-						{game.teams.teamNames.name3}: ${game.teams.teamNames.score3}
+						{game.teams.team3.name}: ${game.teams.team3.score}
 					</h5>
 				</div>
 				<div className="teams">
 					<h5>
-						{game.teams.teamNames.name4}: ${game.teams.teamNames.score4}
+						{game.teams.team4.name}: ${game.teams.team4.score}
 					</h5>
 				</div>
+					{/* {game.teams.map((name,i) => (
+						<div className="teams" key={i}>
+							<h5>
+								{name.name}: ${name.score}
+							</h5>
+						</div>
+					))} */}
 			</div>
 		</>
 	);

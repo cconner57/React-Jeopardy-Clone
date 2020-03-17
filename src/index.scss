@@ -1,10 +1,25 @@
 @import url('https://fonts.googleapis.com/css?family=Days+One&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Chakra+Petch&display=swap');
 
-$primary: #80D8FF;
-$secondary: #40C4FF;
-$accent-primary: #00B0FF;
-$accent-secondary: #0091EA;
+$primary: #80d8ff;
+$secondary: #40c4ff;
+$accent-primary: #00b0ff;
+$accent-secondary: #0091ea;
+
+@mixin container {
+	display: flex;
+	align-items: center;
+	text-align: center;
+	border-radius: 25px;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+	background: white;
+}
+
+@mixin input {
+	outline: none;
+	border-color: $secondary;
+	box-shadow: 0 0 10px $secondary;
+}
 
 html {
 	line-height: 1.15;
@@ -36,12 +51,6 @@ a {
 b,
 strong {
 	font-weight: bolder;
-}
-code,
-kbd,
-samp {
-	font-family: monospace, monospace;
-	font-size: 1em;
 }
 img {
 	border-style: none;
@@ -109,115 +118,88 @@ template {
 // Welcome
 
 .Welcome-Container {
-	display: flex;
+	@include container;
+	margin: 15vh 25vw;
+	padding: 50px;
 	flex-direction: column;
-	align-items: center;
-	text-align: center;
-	margin: 10vh 10vh;
-	padding: 15% 5%;
-	border-radius: 5px;
-	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-	background: #80D8FF;
+	background: $accent-primary;
+	max-width: 500px;
 	h1 {
-		color: #0091EA;
-		font-size: 50px;
+		color: $accent-primary;
+		font-size: 35px;
 		font-family: 'Days One', sans-serif;
+		border-radius: 10px;
+		background: white;
+		padding: 20px 25px;
+		margin-bottom: 100px;
+		box-shadow: 5px 5px 5px 0px rgba(200, 200, 200, 0.5);
 	}
 	input[type=button] {
-		border: 1px solid #0091EA;
-		border-radius: 15px;
-		color: white;
-		background: #0091EA;
+		border-radius: 25px;
+		color: $accent-primary;
+		background: white;
 		margin: 30px 0;
-		padding: 10px;
+		padding: 10px 20px;
 		cursor: pointer;
+		box-shadow: 5px 5px 5px 0px rgba(200, 200, 200, 0.5);
 	}
 	input[type=button]:hover {
 		background: rgb(230, 230, 230);
 	}
-	p {
+	div {
+		border-radius: 10px;
+		color: $accent-primary;
+		background: white;
+		margin: 75px 0;
+		padding: 5px 25px;
+		box-shadow: 5px 5px 5px 0px rgba(200, 200, 200, 0.5);
 		font-family: 'Chakra Petch', sans-serif;
 	}
 }
 
 // Form
 
-.Team-Container {
-	margin: 0 5%;
-	padding: 15px;
-	div {
-		display: flex;
-		border-radius: 5px;
-		align-items: center;
-		justify-content: center;
-		margin: 0 25%;
-		padding: 3%;
-		background: white;
-		border-radius: 5px;
-		box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-		label {
-			background: lightblue;
-			border-radius: 10px 0 0 10px;
-			padding: 5px;
-			box-shadow: 5px 5px 5px 0px rgba(200, 200, 200, 0.5);
-		}
-		input[type=text] {
-			background: lightblue;
-			border: none;
-			padding: 5px 0;
-			box-shadow: 5px 5px 5px 0px rgba(200, 200, 200, 0.5);
-		}
-		input[type=button] {
-			background: lightblue;
-			border: none;
-			border-left: .5px solid gray;
-			border-radius: 0 10px 10px 0;
-			padding: 5px;
-			cursor: pointer;
-			box-shadow: 5px 5px 5px 0px rgba(200, 200, 200, 0.5);
-		}
-	}
-}
-
 .Form-Container {
-	margin-top: 5%;
-	padding: 15px;
-}
-
-.Input-Categories {
-	display: flex;
-	flex-wrap: wrap;
-	text-align: center;
-	justify-content: space-evenly;
-}
-
-.Input-Group {
-	border: 1px solid black;
-	border-radius: 5px;
-	margin: 0 40px;
-	padding: 5px;
-	input[type=text] {
-		width: 200px;
-	}
-}
-
-.Input-Questions {
-	border-radius: 5px;
-	display: flex;
+	@include container;
+	justify-content: center;
 	flex-direction: column;
+	padding: 15px;
+	flex-wrap: wrap;
 	width: 350px;
-	margin: 10px;
-	background: white;
-	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+	margin: 10% 35%;
 	.Input-Title {
 		text-align: center;
 		margin: 10px 20%;
 		width: 200px;
+		border: 1px solid $primary;
+		border-radius: 15px;
+		box-shadow: 5px 5px 5px 0px rgba(200, 200, 200, 0.5);
+	}
+	.Input-Title:focus {
+		@include input;
+	}
+	.Input-Group {
+		border: 1px solid $accent-primary;
+		border-radius: 5px;
+		margin: 0 40px;
+		padding: 5px;
+		box-shadow: 5px 5px 5px 0px rgba(200, 200, 200, 0.5);
+		input[type=text] {
+			width: 200px;
+			border: 1px solid $primary;
+			border-radius: 3px;
+			margin: 1px 0;
+		}
+		input[type=text]:focus {
+			@include input;
+		}
 	}
 	input[type=submit] {
 		margin: 10px 125px;
-		border: 1px solid gray;
+		border: 1px solid $secondary;
+		background: white;
 		border-radius: 10px;
+		box-shadow: 5px 5px 5px 0px rgba(200, 200, 200, 0.5);
 	}
 	input[type=submit]:hover {
 		background: gray;
@@ -225,8 +207,39 @@ template {
 	}
 }
 
-
 // Team
+
+.Team-Container {
+	@include container;
+	justify-content: center;
+	margin: 0 5%;
+	padding: 15px;
+	label {
+		border-radius: 10px 0 0 10px;
+		padding: 5px;
+		border: 1px solid $primary;
+		box-shadow: 5px 5px 5px 0px rgba(200, 200, 200, 0.5);
+	}
+	input[type=text] {
+		border: 1px solid $primary;
+		padding: 5px 0;
+		box-shadow: 5px 5px 5px 0px rgba(200, 200, 200, 0.5);
+	}
+	input[type=text]:focus {
+		@include input;
+	}
+	input[type=button] {
+		background: white;
+		border: 1px solid $primary;
+		border-radius: 0 10px 10px 0;
+		padding: 5px;
+		cursor: pointer;
+		box-shadow: 5px 5px 5px 0px rgba(200, 200, 200, 0.5);
+	}
+	input[type=button]:hover {
+		background: rgb(230, 230, 230);
+	}
+}
 
 .team-container {
 	display: flex;
