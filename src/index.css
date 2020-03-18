@@ -159,6 +159,7 @@ template {
   cursor: pointer;
   -webkit-box-shadow: 5px 5px 5px 0px rgba(200, 200, 200, 0.5);
           box-shadow: 5px 5px 5px 0px rgba(200, 200, 200, 0.5);
+  border: none;
 }
 
 .Welcome-Container input[type=button]:hover {
@@ -252,7 +253,6 @@ template {
 }
 
 .Form-Container input[type=submit]:hover {
-  background: #e1e1e1;
   cursor: pointer;
 }
 
