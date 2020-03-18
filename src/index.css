@@ -128,7 +128,7 @@ template {
   -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
           box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   background: white;
-  margin: 15vh 25vw;
+  margin: 11% 25vw;
   padding: 50px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -253,14 +253,15 @@ template {
 }
 
 .Form-Container input[type=submit]:hover {
+  outline: none;
+  border-color: #40c4ff;
+  -webkit-box-shadow: 0 0 10px #40c4ff;
+          box-shadow: 0 0 10px #40c4ff;
   cursor: pointer;
 }
 
 .Form-Container input[type=submit]:focus {
   outline: none;
-  border-color: #40c4ff;
-  -webkit-box-shadow: 0 0 10px #40c4ff;
-          box-shadow: 0 0 10px #40c4ff;
 }
 
 .Progress-Bar {

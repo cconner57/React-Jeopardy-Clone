@@ -119,7 +119,7 @@ template {
 
 .Welcome-Container {
 	@include container;
-	margin: 15vh 25vw;
+	margin: 11% 25vw;
 	padding: 50px;
 	flex-direction: column;
 	background: $accent-primary;
@@ -203,10 +203,11 @@ template {
 		box-shadow: 5px 5px 5px 0px rgba(200, 200, 200, 0.5);
 	}
 	input[type=submit]:hover {
+		@include input;
 		cursor: pointer;
 	}
 	input[type=submit]:focus {
-		@include input;
+		outline: none;
 	}
 }
 
