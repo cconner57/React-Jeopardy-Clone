@@ -1,6 +1,7 @@
 import React from 'react'
+import Progress from './Progress'
 
-function FormInput2({category, nextStep, onChange}) {
+const FormInput2 = ({category, step, nextStep, onChange}) => {
     const next = e => {
         e.preventDefault();
         nextStep();
@@ -9,6 +10,7 @@ function FormInput2({category, nextStep, onChange}) {
     return (
         <>
             <form className="Form-Container" onSubmit={next}>
+                <Progress step={step - 1} />
                 <input className="Input-Title" type="text" placeholder={category} onChange={onChange} />
                 <div className="Input-Group">
                     <input type="text" placeholder="$100 Question" onChange={onChange} />

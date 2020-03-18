@@ -33,7 +33,7 @@ const GameInput = () => {
 			return (
 				<>
 				<GameProvider>
-					<QuestionInput category="Category 1" nextStep={nextStep} onChange={onChange} />
+					<QuestionInput category="Category 1" step={data.step} nextStep={nextStep} onChange={onChange} />
 					<TeamInput nextStep={nextStep} onChange={onChange} />
 				</GameProvider>
 				</>
@@ -41,31 +41,31 @@ const GameInput = () => {
 		case 3:
 			return (
 				<GameProvider>
-					<QuestionInput category="Category 2" nextStep={nextStep} onChange={onChange} />
+					<QuestionInput category="Category 2" step={data.step} nextStep={nextStep} onChange={onChange} />
 				</GameProvider>
 			);
 		case 4:
 			return (
 				<GameProvider>
-					<QuestionInput category="Category 3" nextStep={nextStep} onChange={onChange} />
+					<QuestionInput category="Category 3" step={data.step} nextStep={nextStep} onChange={onChange} />
 				</GameProvider>
 			);
 		case 5:
 			return (
 				<GameProvider>
-					<QuestionInput category="Category 4" nextStep={nextStep} onChange={onChange} />
+					<QuestionInput category="Category 4" step={data.step} nextStep={nextStep} onChange={onChange} />
 				</GameProvider>
 			);
 		case 6:
 			return (
 				<GameProvider>
-					<QuestionInput category="Category 5" nextStep={nextStep} onChange={onChange} />
+					<QuestionInput category="Category 5" step={data.step} nextStep={nextStep} onChange={onChange} />
 				</GameProvider>
 			);
 		case 7:
 			return (
 				<GameProvider>
-					<QuestionInput category="Category 6" nextStep={nextStep} onChange={onChange} />
+					<QuestionInput category="Category 6" step={data.step} nextStep={nextStep} onChange={onChange} />
 				</GameProvider>
 			);
 		case 8:

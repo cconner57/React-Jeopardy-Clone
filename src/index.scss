@@ -202,9 +202,27 @@ template {
 		box-shadow: 5px 5px 5px 0px rgba(200, 200, 200, 0.5);
 	}
 	input[type=submit]:hover {
-		background: gray;
+		background: rgb(225, 225, 225);
 		cursor: pointer;
 	}
+	input[type=submit]:focus {
+		@include input;
+	}
+}
+
+.Progress-Bar {
+	height: 20px;
+	width: 300px;
+	border-radius: 50px;
+	border: 1px solid $primary;
+	box-shadow: 5px 5px 5px 0px rgba(200, 200, 200, 0.5);
+}
+
+.Progress-Fill {
+background: $secondary;
+height: 100%;
+border-radius: inherit;
+transition: width .5s ease-in;
 }
 
 // Team

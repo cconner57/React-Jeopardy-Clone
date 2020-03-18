@@ -252,8 +252,32 @@ template {
 }
 
 .Form-Container input[type=submit]:hover {
-  background: gray;
+  background: #e1e1e1;
   cursor: pointer;
+}
+
+.Form-Container input[type=submit]:focus {
+  outline: none;
+  border-color: #40c4ff;
+  -webkit-box-shadow: 0 0 10px #40c4ff;
+          box-shadow: 0 0 10px #40c4ff;
+}
+
+.Progress-Bar {
+  height: 20px;
+  width: 300px;
+  border-radius: 50px;
+  border: 1px solid #80d8ff;
+  -webkit-box-shadow: 5px 5px 5px 0px rgba(200, 200, 200, 0.5);
+          box-shadow: 5px 5px 5px 0px rgba(200, 200, 200, 0.5);
+}
+
+.Progress-Fill {
+  background: #40c4ff;
+  height: 100%;
+  border-radius: inherit;
+  -webkit-transition: width .5s ease-in;
+  transition: width .5s ease-in;
 }
 
 .Team-Container {
