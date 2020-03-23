@@ -2,9 +2,9 @@ import React, { useContext } from 'react';
 import { GameContext } from '../GameContext';
 
 const FormInput1 = ({ nextStep, onChange }) => {
-	const [ setGame ] = useContext(GameContext);
+	const [setGame] = useContext(GameContext);
 
-	const next = (e) => {
+	const next = e => {
 		e.preventDefault();
 		// setGame({teams: e.target.value})
 		nextStep();
@@ -15,10 +15,15 @@ const FormInput1 = ({ nextStep, onChange }) => {
 	// }
 
 	return (
-		<form className="Team-Container" onSubmit={next}>
+		<form className='Team-Container' onSubmit={next}>
 			<label>Team Name:</label>
-			<input name="teamName" type="text" placeholder="(optional)" onChange={setGame.teams.team} />
-			<input type="button" value="&#43; Add Team" />
+			<input
+				name='teamName'
+				type='text'
+				placeholder='(optional)'
+				onChange={setGame.teams.team}
+			/>
+			<input type='button' value='&#43; Add Team' />
 		</form>
 	);
 };

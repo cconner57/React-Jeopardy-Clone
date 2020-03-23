@@ -11,7 +11,7 @@ const Board = () => {
 	// };
 
 	return (
-		<div className="Board-Container">
+		<div className='Board-Container'>
 			<h1>Jeopardy</h1>
 			<GameProvider>
 				<Teams />
@@ -19,6 +19,6 @@ const Board = () => {
 			</GameProvider>
 		</div>
 	);
-}
+};
 
 export default Board;

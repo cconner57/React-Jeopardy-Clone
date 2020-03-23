@@ -6,7 +6,7 @@ import Board from './Board';
 import { GameProvider } from './GameContext';
 
 const GameInput = () => {
-	const [ data, setData ] = useState({
+	const [data, setData] = useState({
 		step: 1
 	});
 
@@ -22,7 +22,7 @@ const GameInput = () => {
 	// 	});
 	// };
 
-	const onChange = (input) => (e) => {
+	const onChange = input => e => {
 		setData({ [input]: e.target.value });
 	};
 
@@ -32,40 +32,70 @@ const GameInput = () => {
 		case 2:
 			return (
 				<>
-				<GameProvider>
-					<QuestionInput category="Category 1" step={data.step} nextStep={nextStep} onChange={onChange} />
-					<TeamInput nextStep={nextStep} onChange={onChange} />
-				</GameProvider>
+					<GameProvider>
+						<QuestionInput
+							category='Category 1'
+							step={data.step}
+							nextStep={nextStep}
+							onChange={onChange}
+						/>
+						<TeamInput nextStep={nextStep} onChange={onChange} />
+					</GameProvider>
 				</>
 			);
 		case 3:
 			return (
 				<GameProvider>
-					<QuestionInput category="Category 2" step={data.step} nextStep={nextStep} onChange={onChange} />
+					<QuestionInput
+						category='Category 2'
+						step={data.step}
+						nextStep={nextStep}
+						onChange={onChange}
+					/>
 				</GameProvider>
 			);
 		case 4:
 			return (
 				<GameProvider>
-					<QuestionInput category="Category 3" step={data.step} nextStep={nextStep} onChange={onChange} />
+					<QuestionInput
+						category='Category 3'
+						step={data.step}
+						nextStep={nextStep}
+						onChange={onChange}
+					/>
 				</GameProvider>
 			);
 		case 5:
 			return (
 				<GameProvider>
-					<QuestionInput category="Category 4" step={data.step} nextStep={nextStep} onChange={onChange} />
+					<QuestionInput
+						category='Category 4'
+						step={data.step}
+						nextStep={nextStep}
+						onChange={onChange}
+					/>
 				</GameProvider>
 			);
 		case 6:
 			return (
 				<GameProvider>
-					<QuestionInput category="Category 5" step={data.step} nextStep={nextStep} onChange={onChange} />
+					<QuestionInput
+						category='Category 5'
+						step={data.step}
+						nextStep={nextStep}
+						onChange={onChange}
+					/>
 				</GameProvider>
 			);
 		case 7:
 			return (
 				<GameProvider>
-					<QuestionInput category="Category 6" step={data.step} nextStep={nextStep} onChange={onChange} />
+					<QuestionInput
+						category='Category 6'
+						step={data.step}
+						nextStep={nextStep}
+						onChange={onChange}
+					/>
 				</GameProvider>
 			);
 		case 8:

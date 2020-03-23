@@ -2,8 +2,8 @@ import React, { useState, createContext } from 'react';
 
 export const GameContext = createContext();
 
-export const GameProvider = (props) => {
-	const [ game, setGame ] = useState({
+export const GameProvider = props => {
+	const [game, setGame] = useState({
 		teams: {
 			team1: {
 				name: 'Chris',
@@ -30,7 +30,7 @@ export const GameProvider = (props) => {
 			category5: 'Category 5',
 			category6: 'Category 6'
 		},
-		score: [ 100, 200, 300, 400, 500 ],
+		score: [100, 200, 300, 400, 500],
 		questions: {
 			set1: {
 				question1: 'How many legs do dogs have?',
@@ -126,5 +126,9 @@ export const GameProvider = (props) => {
 			}
 		}
 	});
-	return <GameContext.Provider value={[ game, setGame ]}>{props.children}</GameContext.Provider>;
+	return (
+		<GameContext.Provider value={[game, setGame]}>
+			{props.children}
+		</GameContext.Provider>
+	);
 };
