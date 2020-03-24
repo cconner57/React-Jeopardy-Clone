@@ -1,24 +1,55 @@
 @import url('https://fonts.googleapis.com/css?family=Days+One&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Chakra+Petch&display=swap');
 
-$primary: #80d8ff;
+$primary: #e0e5ec;
+
+// $primary: #80d8ff;
 $secondary: #40c4ff;
-$accent-primary: #00b0ff;
-$accent-secondary: #0091ea;
+// $accent-primary: #00b0ff;
+// $accent-secondary: #0091ea;
 
 @mixin container {
 	display: flex;
 	align-items: center;
 	text-align: center;
-	border-radius: 25px;
-	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-	background: white;
+	border-radius: 50px;
+	background: $primary;
+	box-shadow: 20px 20px 60px #ffffff, -20px -20px 60px #a3b1c6;
+}
+
+@mixin inward-shadow {
+	border-radius: 50px;
+	background: linear-gradient(145deg, #f0f5fd, #caced4);
+	box-shadow: 20px 20px 60px #bec3c9, -20px -20px 60px #ffffff;
+}
+
+@mixin outward-shadow {
+	border-radius: 50px;
+	background: linear-gradient(145deg, #caced4, #f0f5fd);
+	box-shadow: 20px 20px 60px #bec3c9, -20px -20px 60px #ffffff;
+}
+
+@mixin pressed-shadow {
+	border-radius: 50px;
+	background: $primary;
+	box-shadow: inset 20px 20px 60px #ffffff, inset -20px -20px 60px #a3b1c6;
 }
 
 @mixin input {
 	outline: none;
+	background: #f0f1f3;
 	border-color: $secondary;
 	box-shadow: 0 0 10px $secondary;
+}
+
+@mixin button($height, $width) {
+	color: $secondary;
+	margin: $height $width;
+	padding: 15px 30px;
+	font-weight: bold;
+	border: none;
+	@include pressed-shadow();
+	cursor: pointer;
 }
 
 html {
@@ -27,7 +58,7 @@ html {
 }
 body {
 	margin: 0;
-	background: #f8f8f8;
+	background: $primary;
 }
 main {
 	display: block;
@@ -119,41 +150,30 @@ template {
 
 .Welcome-Container {
 	@include container;
-	margin: 11% 25vw;
-	padding: 50px;
 	flex-direction: column;
-	background: $accent-primary;
 	max-width: 500px;
+	margin: 15vh 20vw;
+	padding: 50px;
 	h1 {
-		color: $accent-primary;
+		@include outward-shadow();
+		color: $secondary;
+		margin-bottom: 100px;
+		padding: 20px 25px;
 		font-size: 35px;
 		font-family: 'Days One', sans-serif;
-		border-radius: 10px;
-		background: white;
-		padding: 20px 25px;
-		margin-bottom: 100px;
-		box-shadow: 5px 5px 5px 0px rgba(200, 200, 200, 0.5);
 	}
-	input[type=button] {
-		border-radius: 25px;
-		color: $accent-primary;
-		background: white;
-		margin: 30px 0;
-		padding: 10px 20px;
-		cursor: pointer;
-		box-shadow: 5px 5px 5px 0px rgba(200, 200, 200, 0.5);
-		border: none;
+	input[type='button'] {
+		@include button(30px, 0px);
 	}
-	input[type=button]:hover {
-		background: rgb(230, 230, 230);
+	input[type='button']:hover {
+		@include input();
 	}
 	div {
-		border-radius: 10px;
-		color: $accent-primary;
-		background: white;
+		@include outward-shadow();
+		color: $secondary;
+		font-weight: bold;
 		margin: 75px 0;
-		padding: 5px 25px;
-		box-shadow: 5px 5px 5px 0px rgba(200, 200, 200, 0.5);
+		padding: 15px 25px;
 		font-family: 'Chakra Petch', sans-serif;
 	}
 }
@@ -164,66 +184,54 @@ template {
 	@include container;
 	justify-content: center;
 	flex-direction: column;
-	padding: 15px;
-	flex-wrap: wrap;
-	width: 350px;
-	margin: 10% 35%;
-	.Input-Title {
-		text-align: center;
-		margin: 10px 20%;
-		width: 200px;
-		border: 1px solid $primary;
-		border-radius: 15px;
-		box-shadow: 5px 5px 5px 0px rgba(200, 200, 200, 0.5);
-	}
-	.Input-Title:focus {
-		@include input;
+	margin: 15vh 20vw;
+	padding: 25px;
+	max-width: 500px;
+	.Progress-Bar {
+		@include pressed-shadow();
+		margin: 10px 0;
+		height: 20px;
+		width: 400px;
+		.Progress-Fill {
+			background: $secondary;
+			height: 100%;
+			border-radius: inherit;
+			transition: width 0.5s ease-in;
+		}
 	}
 	.Input-Group {
-		border: 1px solid $accent-primary;
-		border-radius: 5px;
-		margin: 0 40px;
-		padding: 5px;
-		box-shadow: 5px 5px 5px 0px rgba(200, 200, 200, 0.5);
-		input[type=text] {
-			width: 200px;
-			border: 1px solid $primary;
-			border-radius: 3px;
-			margin: 1px 0;
+		@include outward-shadow();
+		border: none;
+		margin: 15px 40px;
+		padding: 35px 25px;
+		input[type='text']:first-child {
+			margin-bottom: 20px;
+			width: 225px;
 		}
-		input[type=text]:focus {
+		input[type='text'] {
+			@include pressed-shadow();
+			margin: 2px 0;
+			padding: 5px;
+			width: 300px;
+			font-size: 16px;
+			font-family: 'Chakra Petch', sans-serif;
+			text-align: center;
+			border: none;
+		}
+		input[type='text']:focus {
 			@include input;
 		}
+		hr {
+			border: 1px solid $secondary;
+			width: 50px;
+		}
 	}
-	input[type=submit] {
-		margin: 10px 125px;
-		border: 1px solid $secondary;
-		background: white;
-		border-radius: 10px;
-		box-shadow: 5px 5px 5px 0px rgba(200, 200, 200, 0.5);
+	input[type='submit'] {
+		@include button(10px, 125px);
 	}
-	input[type=submit]:hover {
+	input[type='submit']:hover {
 		@include input;
-		cursor: pointer;
 	}
-	input[type=submit]:focus {
-		outline: none;
-	}
-}
-
-.Progress-Bar {
-	height: 20px;
-	width: 300px;
-	border-radius: 50px;
-	border: 1px solid $primary;
-	box-shadow: 5px 5px 5px 0px rgba(200, 200, 200, 0.5);
-}
-
-.Progress-Fill {
-background: $secondary;
-height: 100%;
-border-radius: inherit;
-transition: width .5s ease-in;
 }
 
 // Team
@@ -239,15 +247,15 @@ transition: width .5s ease-in;
 		border: 1px solid $primary;
 		box-shadow: 5px 5px 5px 0px rgba(200, 200, 200, 0.5);
 	}
-	input[type=text] {
+	input[type='text'] {
 		border: 1px solid $primary;
 		padding: 5px 0;
 		box-shadow: 5px 5px 5px 0px rgba(200, 200, 200, 0.5);
 	}
-	input[type=text]:focus {
+	input[type='text']:focus {
 		@include input;
 	}
-	input[type=button] {
+	input[type='button'] {
 		background: white;
 		border: 1px solid $primary;
 		border-radius: 0 10px 10px 0;
@@ -255,7 +263,7 @@ transition: width .5s ease-in;
 		cursor: pointer;
 		box-shadow: 5px 5px 5px 0px rgba(200, 200, 200, 0.5);
 	}
-	input[type=button]:hover {
+	input[type='button']:hover {
 		background: rgb(230, 230, 230);
 	}
 }
@@ -274,85 +282,51 @@ transition: width .5s ease-in;
 	background-color: rgb(0, 100, 255);
 	h5 {
 		width: 120px;
+		color: yellow;
 	}
 }
 
 // Board
 .Board-Container {
-	// width: 100vw;
-	height: 98vh;
+	height: 100vh;
 	text-align: center;
-	background: black;
-}
-
-.board {
-	display: grid;
-	grid-template-columns: repeat(6, 15%);
-	grid-template-rows: repeat(5, auto);
-	grid-gap: 10px;
-	margin: 5px;
-	justify-content: center;
-}
-
-.category {
-	padding: 45px;
-	border-radius: 15px;
-	border: 2px solid white;
-	background: radial-gradient(
-		circle,
-		rgb(0, 0, 255) 20%,
-		rgb(0, 50, 255) 40%,
-		rgb(0, 100, 255) 60%,
-		rgb(0, 150, 255) 80%,
-		rgb(0, 200, 255) 100%
-	);
-}
-
-.block {
-	display: flex;
-	height: 150px;
-	overflow: hidden;
-	min-width: 130px;
-	min-height: 90px;
-	border-radius: 15px;
-	align-items: center;
-	justify-content: center;
-	border: 2px solid white;
-	background: radial-gradient(
-		circle,
-		rgb(0, 0, 255) 20%,
-		rgb(0, 50, 255) 40%,
-		rgb(0, 100, 255) 60%,
-		rgb(0, 150, 255) 80%,
-		rgb(0, 200, 255) 100%
-	);
-}
-
-.block:hover {
-	cursor: pointer;
-	background: radial-gradient(circle, rgb(0, 200, 255) 20%, rgb(0, 0, 255) 100%);
-}
-
-h1 {
-	padding: 5px;
-}
-
-h5 {
-	color: yellow;
-}
-
-.question {
-	display: none;
-}
-
-.fade-out {
-	animation: fadeOut ease 8s;
-}
-@keyframes fadeOut {
-	0% {
-		opacity: 1;
+	background: $primary;
+	h1 {
+		margin: 25px 0;
+		font-family: 'Days One', sans-serif;
+		color: $secondary;
+		font-size: 40px;
 	}
-	100% {
-		opacity: 0;
+	.board {
+		display: flex;
+		flex-direction: column;
+		// display: grid;
+		// grid-template-columns: repeat(6, 15%);
+		// grid-template-rows: repeat(5, auto);
+		// grid-gap: 10px;
+		// margin: 5px;
+		justify-content: center;
+		.category {
+			padding: 45px;
+			h5 {
+				color: $secondary;
+			}
+		}
+		.block {
+			display: flex;
+			height: 150px;
+			overflow: hidden;
+			min-width: 130px;
+			min-height: 90px;
+			align-items: center;
+			justify-content: center;
+			@include button(5px, 5px);
+			h5 {
+				color: $secondary;
+			}
+		}
+		.block:hover {
+			@include input();
+		}
 	}
 }
