@@ -22,17 +22,10 @@ export const GameProvider = props => {
 				score: 0
 			}
 		},
-		categories: {
-			category1: 'Category 1',
-			category2: 'Category 2',
-			category3: 'Category 3',
-			category4: 'Category 4',
-			category5: 'Category 5',
-			category6: 'Category 6'
-		},
 		score: [100, 200, 300, 400, 500],
 		questions: {
 			set1: {
+				category: 'Category 1',
 				question1: 'How many legs do dogs have?',
 				question2: 'How many states are in the USA?',
 				question3: 'How many ounces are in a gallon?',
@@ -40,6 +33,7 @@ export const GameProvider = props => {
 				question5: 'Who was the 20th president'
 			},
 			set2: {
+				category: 'Category 2',
 				question1: '',
 				question2: '',
 				question3: '',
@@ -47,6 +41,7 @@ export const GameProvider = props => {
 				question5: ''
 			},
 			set3: {
+				category: 'Category 3',
 				question1: '',
 				question2: '',
 				question3: '',
@@ -54,6 +49,7 @@ export const GameProvider = props => {
 				question5: ''
 			},
 			set4: {
+				category: 'Category 4',
 				question1: '',
 				question2: '',
 				question3: '',
@@ -61,6 +57,7 @@ export const GameProvider = props => {
 				question5: ''
 			},
 			set5: {
+				category: 'Category 5',
 				question1: '',
 				question2: '',
 				question3: '',
@@ -68,6 +65,7 @@ export const GameProvider = props => {
 				question5: ''
 			},
 			set6: {
+				category: 'Category 6',
 				question1: '',
 				question2: '',
 				question3: '',
@@ -81,48 +79,42 @@ export const GameProvider = props => {
 				answer2: '',
 				answer3: '',
 				answer4: '',
-				answer5: '',
-				answer6: ''
+				answer5: ''
 			},
 			set2: {
 				answer1: '',
 				answer2: '',
 				answer3: '',
 				answer4: '',
-				answer5: '',
-				answer6: ''
+				answer5: ''
 			},
 			set3: {
 				answer1: '',
 				answer2: '',
 				answer3: '',
 				answer4: '',
-				answer5: '',
-				answer6: ''
+				answer5: ''
 			},
 			set4: {
 				answer1: '',
 				answer2: '',
 				answer3: '',
 				answer4: '',
-				answer5: '',
-				answer6: ''
+				answer5: ''
 			},
 			set5: {
 				answer1: '',
 				answer2: '',
 				answer3: '',
 				answer4: '',
-				answer5: '',
-				answer6: ''
+				answer5: ''
 			},
 			set6: {
 				answer1: '',
 				answer2: '',
 				answer3: '',
 				answer4: '',
-				answer5: '',
-				answer6: ''
+				answer5: ''
 			}
 		}
 	});
