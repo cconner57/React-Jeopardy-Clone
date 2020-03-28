@@ -24,8 +24,8 @@ $secondary: #40c4ff;
 }
 
 @mixin outward-shadow {
-	border-radius: 50px;
-	background: linear-gradient(145deg, #caced4, #f0f5fd);
+	border-radius: 15px;
+	background: linear-gradient(145deg, #f0f5fd);
 	box-shadow: 20px 20px 60px #bec3c9, -20px -20px 60px #ffffff;
 }
 
@@ -298,23 +298,27 @@ template {
 		font-size: 40px;
 	}
 	.board {
-		display: flex;
-		flex-direction: column;
-		// display: grid;
-		// grid-template-columns: repeat(6, 15%);
-		// grid-template-rows: repeat(5, auto);
-		// grid-gap: 10px;
+		// display: flex;
+		// flex-direction: column;
+		display: grid;
+		grid-template-columns: repeat(6, 10%);
+		grid-template-rows: repeat(5, auto);
+		grid-gap: 10px;
 		// margin: 5px;
 		justify-content: center;
 		.category {
+			height:100px;
+			width:100px;
 			padding: 45px;
 			h5 {
 				color: $secondary;
 			}
 		}
 		.block {
-			display: flex;
-			height: 150px;
+			// display: flex;
+			// flex-direction: column;
+			height: 100px;
+			width: 100px;
 			overflow: hidden;
 			min-width: 130px;
 			min-height: 90px;
