@@ -4,32 +4,47 @@ import { GameContext } from '../GameContext';
 
 const QuestionInput = ({ step, nextStep }) => {
 	const [game, setGame] = useContext(GameContext);
-	const next = e => {
+	const handleSubmit = e => {
 		e.preventDefault();
-		// setGame({ [input]: e.target.value });
 		nextStep();
 	};
 
+	const handleChange = e => {
+		console.log(e.target.name);
+		console.log(e.target.value);
+		// const { categories } = { ...game.categories };
+		// const currentState = categories;
+		// currentState[e.target.name] = e.target.value;
+		// setGame({ categories: currentState });
+		
+		// setGame(prevState => ({
+		// 	...prevState,
+		// 	categories: {
+		// 		[e.target.name]: e.target.value
+		// 	}
+		// }));
+	};
+
 	return (
-		<form className='Form-Container' onSubmit={next}>
+		<form className='Form-Container' onSubmit={handleSubmit}>
 			<Progress step={step - 1} />
 			<div className='Input-Group'>
 				<input
 					className='Input-Title'
 					type='text'
-					placeholder={game.questions.set1.category}
-					onChange={e => {
-						setGame( e.target.value);
-					}}
-				/>
-				{/* <input
-					type='text'
-					placeholder='$100 Question'
-					onChange={e => {
-						setGame(e.target.value);
-					}}
+					name='category1'
+					placeholder='Enter Category'
+					value={game.categories.category1}
+					onChange={handleChange}
 				/>
 				<input
+					type='text'
+					name='question'
+					placeholder='$100 Question'
+					value={game.column1[0].question}
+					onChange={handleChange}
+				/>
+				{/* <input
 					type='text'
 					placeholder='$100 Answer'
 					onChange={e => {

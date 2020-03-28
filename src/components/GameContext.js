@@ -4,119 +4,158 @@ export const GameContext = createContext();
 
 export const GameProvider = props => {
 	const [game, setGame] = useState({
-		teams: {
-			team1: {
-				name: 'Chris',
-				score: 0
-			},
-			team2: {
-				name: 'Marma',
-				score: 0
-			},
-			team3: {
-				name: 'Amos',
-				score: 0
-			},
-			team4: {
-				name: 'Delilah',
-				score: 0
-			}
+		teams: [
+			{ name: 'Lucy', score: 0 },
+			{ name: 'Ricky', score: 0 },
+			{ name: 'Ethel', score: 0 },
+			{ name: 'Fred', score: 0 }
+		],
+		categories: {
+			category1: '1',
+			category2: '2',
+			category3: '3',
+			category4: '4',
+			category5: '5',
+			category6: '6'
 		},
-		score: [100, 200, 300, 400, 500],
-		questions: {
-			set1: {
-				category: 'Category 1',
-				question1: 'How many legs do dogs have?',
-				question2: 'How many states are in the USA?',
-				question3: 'How many ounces are in a gallon?',
-				question4: 'What is California"s capital?',
-				question5: 'Who was the 20th president'
+		column1: [
+			{ id: 100, question: '', answer: '' },
+			{
+				id: 200,
+				question: 'How many states are in the USA?',
+				answer: '50 states'
 			},
-			set2: {
-				category: 'Category 2',
-				question1: '',
-				question2: '',
-				question3: '',
-				question4: '',
-				question5: ''
+			{
+				id: 300,
+				question: 'How many ounces are in a gallon?',
+				answer: '128 ounces'
 			},
-			set3: {
-				category: 'Category 3',
-				question1: '',
-				question2: '',
-				question3: '',
-				question4: '',
-				question5: ''
+			{
+				id: 400,
+				question: "What is California's captital?",
+				answer: 'Sacramento'
 			},
-			set4: {
-				category: 'Category 4',
-				question1: '',
-				question2: '',
-				question3: '',
-				question4: '',
-				question5: ''
-			},
-			set5: {
-				category: 'Category 5',
-				question1: '',
-				question2: '',
-				question3: '',
-				question4: '',
-				question5: ''
-			},
-			set6: {
-				category: 'Category 6',
-				question1: '',
-				question2: '',
-				question3: '',
-				question4: '',
-				question5: ''
+			{
+				id: 500,
+				question: 'Who was the 20th president?',
+				answer: 'James A. Garfield'
 			}
-		},
-		answers: {
-			set1: {
-				answer1: '',
-				answer2: '',
-				answer3: '',
-				answer4: '',
-				answer5: ''
+		],
+		column2: [
+			{ id: 100, question: 'How many legs do dogs have?', answer: '4' },
+			{
+				id: 200,
+				question: 'How many states are in the USA?',
+				answer: '50 states'
 			},
-			set2: {
-				answer1: '',
-				answer2: '',
-				answer3: '',
-				answer4: '',
-				answer5: ''
+			{
+				id: 300,
+				question: 'How many ounces are in a gallon?',
+				answer: '128 ounces'
 			},
-			set3: {
-				answer1: '',
-				answer2: '',
-				answer3: '',
-				answer4: '',
-				answer5: ''
+			{
+				id: 400,
+				question: "WHat is California's captital?",
+				answer: 'Sacramento'
 			},
-			set4: {
-				answer1: '',
-				answer2: '',
-				answer3: '',
-				answer4: '',
-				answer5: ''
-			},
-			set5: {
-				answer1: '',
-				answer2: '',
-				answer3: '',
-				answer4: '',
-				answer5: ''
-			},
-			set6: {
-				answer1: '',
-				answer2: '',
-				answer3: '',
-				answer4: '',
-				answer5: ''
+			{
+				id: 500,
+				question: 'Who was the 20th president?',
+				answer: 'James A. Garfield'
 			}
-		}
+		],
+		column3: [
+			{ id: 100, question: 'How many legs do dogs have?', answer: '4' },
+			{
+				id: 200,
+				question: 'How many states are in the USA?',
+				answer: '50 states'
+			},
+			{
+				id: 300,
+				question: 'How many ounces are in a gallon?',
+				answer: '128 ounces'
+			},
+			{
+				id: 400,
+				question: "WHat is California's captital?",
+				answer: 'Sacramento'
+			},
+			{
+				id: 500,
+				question: 'Who was the 20th president?',
+				answer: 'James A. Garfield'
+			}
+		],
+		column4: [
+			{ id: 100, question: 'How many legs do dogs have?', answer: '4' },
+			{
+				id: 200,
+				question: 'How many states are in the USA?',
+				answer: '50 states'
+			},
+			{
+				id: 300,
+				question: 'How many ounces are in a gallon?',
+				answer: '128 ounces'
+			},
+			{
+				id: 400,
+				question: "WHat is California's captital?",
+				answer: 'Sacramento'
+			},
+			{
+				id: 500,
+				question: 'Who was the 20th president?',
+				answer: 'James A. Garfield'
+			}
+		],
+		column5: [
+			{ id: 100, question: 'How many legs do dogs have?', answer: '4' },
+			{
+				id: 200,
+				question: 'How many states are in the USA?',
+				answer: '50 states'
+			},
+			{
+				id: 300,
+				question: 'How many ounces are in a gallon?',
+				answer: '128 ounces'
+			},
+			{
+				id: 400,
+				question: "WHat is California's captital?",
+				answer: 'Sacramento'
+			},
+			{
+				id: 500,
+				question: 'Who was the 20th president?',
+				answer: 'James A. Garfield'
+			}
+		],
+		column6: [
+			{ id: 100, question: 'How many legs do dogs have?', answer: '4' },
+			{
+				id: 200,
+				question: 'How many states are in the USA?',
+				answer: '50 states'
+			},
+			{
+				id: 300,
+				question: 'How many ounces are in a gallon?',
+				answer: '128 ounces'
+			},
+			{
+				id: 400,
+				question: "WHat is California's captital?",
+				answer: 'Sacramento'
+			},
+			{
+				id: 500,
+				question: 'Who was the 20th president?',
+				answer: 'James A. Garfield'
+			}
+		]
 	});
 	return (
 		<GameContext.Provider value={[game, setGame]}>

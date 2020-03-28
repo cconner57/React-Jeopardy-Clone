@@ -16,16 +16,6 @@ const GameInput = () => {
 		});
 	};
 
-	// const prevStep = () => {
-	// 	setData({
-	// 		step: data.step - 1
-	// 	});
-	// };
-
-	// const setValue = input => e => {
-	// 	setData({ [input]: e.target.value });
-	// };
-
 	switch (data.step) {
 		case 1:
 			return <Welcome nextStep={nextStep} />;
